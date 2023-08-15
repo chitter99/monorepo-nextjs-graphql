@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator pothos {
+  provider = "prisma-pothos-types"
+}
+
+enum UserRole {
+  MEMBER
+  ADMIN
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  role   UserRole @default(MEMBER)
+
+  name   String  @unique
+  auth0  String  @unique
+
+  posts          Post[]
+}
+
+model Post {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  title   String
+  content String
+
+  createdById String  @db.ObjectId
+  createdBy   User  @relation(fields: [createdById], references: [id])
+}
+

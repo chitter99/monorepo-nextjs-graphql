@@ -1,0 +1,27 @@
+{
+	"name": "monorepo-nextjs-graphql",
+	"private": true,
+	"scripts": {
+		"dev": "dotenv -- turbo run dev",
+		"build": "dotenv -- turbo run build",
+		"start": "dotenv -- turbo run start",
+		"test": "dotenv -- turbo run test",
+		"lint": "turbo run lint",
+		"format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+		"web": "dotenv -- pnpm --filter=@monorepo/web",
+		"codegen": "dotenv -- pnpm --filter=@monorepo/codegen",
+		"database": "dotenv -- pnpm --filter=@monorepo/database",
+		"eslint": "dotenv -- pnpm --filter=@monorepo/eslint",
+		"graphql": "dotenv -- pnpm --filter=@monorepo/graphql",
+		"tsconfig": "dotenv -- pnpm --filter=@monorepo/tsconfig"
+	},
+	"devDependencies": {
+		"@monorepo/eslint": "workspace:*",
+		"dotenv-cli": "^7.2.1",
+		"eslint": "^8.47.0",
+		"prettier": "^3.0.1",
+		"turbo": "^1.10.12",
+		"typescript": "^5.1.6"
+	},
+	"packageManager": "pnpm@8.6.12"
+}

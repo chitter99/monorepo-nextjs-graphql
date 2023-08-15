@@ -1,0 +1,13 @@
+{
+	"name": "@monorepo/eslint",
+	"main": "index.js",
+	"dependencies": {
+		"eslint-config-next": "latest",
+		"eslint-config-prettier": "latest",
+		"eslint-plugin-react": "latest",
+		"eslint-config-turbo": "latest"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"name": "@monorepo/codegen",
+	"main": "index.js",
+	"dependencies": {
+		"@monorepo/graphql": "workspace:*",
+		"graphql": "latest"
+	}
+}

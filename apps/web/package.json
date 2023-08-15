@@ -1,0 +1,50 @@
+{
+	"name": "@monorepo/web",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "concurrently \"next dev\" \"graphql-codegen --watch\"",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"next": "next",
+		"codegen": "graphql-codegen"
+	},
+	"dependencies": {
+		"@auth0/nextjs-auth0": "^2.6.3",
+		"@chakra-ui/icons": "^2.0.19",
+		"@chakra-ui/next-js": "^2.1.4",
+		"@chakra-ui/react": "^2.7.1",
+		"@emotion/react": "^11.11.1",
+		"@emotion/styled": "^11.11.0",
+		"@pothos/core": "^3.30.0",
+		"@pothos/plugin-prisma": "^3.52.0",
+		"@pothos/plugin-scope-auth": "^3.20.0",
+		"@tanstack/react-query": "^4.29.23",
+		"@monorepo/database": "workspace:*",
+		"@monorepo/graphql": "workspace:*",
+		"framer-motion": "^10.12.18",
+		"graphql": "16.7.1",
+		"graphql-request": "^6.1.0",
+		"next": "13.4.9",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-hook-form": "^7.45.2",
+		"react-icons": "^4.10.1"
+	},
+	"devDependencies": {
+		"@graphql-codegen/cli": "^4.0.1",
+		"@graphql-codegen/client-preset": "^4.0.1",
+		"@graphql-typed-document-node/core": "^3.2.0",
+		"@parcel/watcher": "^2.2.0",
+		"@tanstack/react-query-devtools": "^4.29.23",
+		"@types/node": "^20.4.1",
+		"@types/react": "^18.2.14",
+		"@types/react-dom": "^18.2.6",
+		"@monorepo/codegen": "workspace:*",
+		"@monorepo/eslint": "workspace:*",
+		"@monorepo/tsconfig": "workspace:*",
+		"concurrently": "^8.2.0",
+		"typescript": "^5.1.6"
+	}
+}

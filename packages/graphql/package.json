@@ -1,0 +1,21 @@
+{
+	"name": "@monorepo/graphql",
+	"scripts": {},
+	"dependencies": {
+		"@pothos/core": "^3.32.1",
+		"@pothos/plugin-prisma": "^3.54.0",
+		"@pothos/plugin-scope-auth": "^3.20.0",
+		"graphql": "^16.7.1",
+		"graphql-scalars": "^1.22.2",
+		"graphql-yoga": "^4.0.4"
+	},
+	"devDependencies": {
+		"@monorepo/database": "workspace:*",
+		"@monorepo/tsconfig": "workspace:*",
+		"@types/node": "latest",
+		"prisma": "latest",
+		"ts-node": "latest"
+	},
+	"main": "./index.ts",
+	"types": "./index.ts"
+}

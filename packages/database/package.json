@@ -1,0 +1,21 @@
+{
+	"name": "@monorepo/database",
+	"private": true,
+	"scripts": {
+		"db:generate": "prisma generate",
+		"db:push": "prisma db push",
+		"seed": "ts-node ./seed.ts",
+		"prisma": "prisma"
+	},
+	"dependencies": {
+		"@prisma/client": "latest"
+	},
+	"devDependencies": {
+		"@types/node": "latest",
+		"@monorepo/tsconfig": "workspace:*",
+		"prisma": "latest",
+		"typescript": "latest"
+	},
+	"main": "./index.ts",
+	"types": "./index.ts"
+}
