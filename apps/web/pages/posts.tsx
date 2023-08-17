@@ -55,7 +55,7 @@ export default function Page() {
 								<Td>{post.title}</Td>
 								<Td>{post.content}</Td>
 								<Td>
-									<Link href={'/posts/' + post.id}>
+									<Link href={'/post/' + post.id}>
 										<IconButton
 											aria-label="Edit post"
 											icon={<EditIcon />}

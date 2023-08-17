@@ -26,7 +26,6 @@ type AppPropsWithLayout = AppProps & {
 };
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
-	console.log('Use sidebar' + (Component.useSidebar ? 'true' : 'flase'));
 	const getLayout =
 		Component.getLayout ??
 		(Component.useSidebar
